@@ -60,7 +60,6 @@ class MaquinaVendasTest {
         assertEquals("Dispensando Produto", maquina.getNomeEstado());
         assertInstanceOf(EstadoDispensandoProduto.class, maquina.getEstado());
 
-        // Verifica se as duas notificações ocorreram na ordem correta
         assertEquals(2, mockObserver.getNotificacoes().size());
         assertEquals("Moeda Inserida", mockObserver.getNotificacoes().get(0));
         assertEquals("Dispensando Produto", mockObserver.getNotificacoes().get(1));
